@@ -1,22 +1,48 @@
-'use client'
+"use client";
 import React, { useState } from "react";
-import Header from "@/Components/Header";
-import Nav from "@/Components/Nav";
-
+import axios from "axios";
+import { Button } from "bootstrap";
 const page = () => {
   // let a = 10; // react me aise variable use nhin krte
 
   // react me krte hain aise
   // let [a, setA] = useState(10);
+  const [Image, setImage] = useState([])
+  const getImgs = async () => {
+    try {
+      console.log("images aa rhi hai");
+      const response = await axios.get("https://picsum.photos/v2/list");
+      const data = response.data;
+      console.log(Image);
+      setImage(data);
+    } catch (error) {
+      console.error("error fetching images");
+    }
+  };
   return (
     <div>
-      {/* <h1>
+      {/* <img>
         <b>{a}</b>
-      </h1>
+      </img>
       <button onClick={()=>{setA(a++)}} className="bg-blue-500 p-0.5 rounded-lg">
         increase
       </button> */}
-      page
+      page <br />
+      <button onClick = {getImgs} className="p-2 ml-2 bg-green-600 text-white rounded-3xl focus:shadow-cyan-100">
+        Get images
+      </button>
+      <div className="p-10">
+        {Image.map((img, i) => {
+          return <img 
+            key={i}
+            src= {img.download_url}
+            width={200}
+            height={300}
+            className="m-10 rounded inline-block"
+            />
+          // <img src="img"></img>
+        })}
+      </div>
     </div>
   );
 };
