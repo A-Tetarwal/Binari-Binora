@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
-import { Button } from "bootstrap";
+
 const page = () => {
   // let a = 10; // react me aise variable use nhin krte
 
@@ -31,7 +31,7 @@ const page = () => {
       <button onClick = {getImgs} className="p-2 ml-2 bg-green-600 text-white rounded-3xl focus:shadow-cyan-100">
         Get images
       </button>
-      <div className="p-10">
+
         {Image.map((img, i) => {
           return <img 
             key={i}
@@ -42,7 +42,6 @@ const page = () => {
             />
           // <img src="img"></img>
         })}
-      </div>
     </div>
   );
 };

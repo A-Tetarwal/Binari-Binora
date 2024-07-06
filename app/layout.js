@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div id="top" className="flex justify-between items-center border-0 p-2">
-          <Header />
+          <Header/>
           <Nav user={user} />
         </div>
         {children}
