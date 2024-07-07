@@ -3,7 +3,7 @@ import React from 'react';
 const Features = () => {
   return (
     <div className="container mx-auto p-8">
-      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Binari Features</h1>
+      <h1 className="text-4xl font-bold text-center mb-8 text-blue-300">Binari Features</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="p-6 border rounded-lg shadow-md bg-white">
           <h2 className="text-2xl font-semibold text-blue-600 mb-4">Send Messages in Binary</h2>
