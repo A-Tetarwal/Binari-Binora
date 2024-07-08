@@ -1,0 +1,59 @@
+/* login.css */
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%) scaleY(0);
+    /* opacity: 0; */
+    /* z-index: -1; */
+  }
+  to {
+    transform: translateY(0) scaleY(1);
+    /* opacity: 1; */
+    /* z-index: 0; */
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0) scaleY(1);
+    /* opacity: 1; */
+    /* z-index: 0; */
+  }
+  to {
+    transform: translateY(100%) scaleY(0);
+    /* opacity: 0; */
+    /* z-index: -1; */
+  }
+}
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200%);
+  }
+}
+
+#inputs.animate-slideIn {
+  animation: slideIn 0.5s forwards;
+}
+
+#inputs.animate-slideOut {
+  animation: slideOut 0.5s forwards;
+}
+
+#submit {
+  z-index: 1;
+}
+
+/* Mobile styles */
+@media (min-width: 450px) {
+  .w-1 {
+    width: 35%;
+  }
+}
+@media (max-width: 750px) {
+  .w-1 {
+    width: 75%;
+  }
+}
