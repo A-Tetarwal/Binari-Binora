@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import './login.css'; // Import the CSS file
+import './Login.css'; // Import the CSS file
 
 const Page = () => {
   const [isAnimating, setIsAnimating] = useState(false);
