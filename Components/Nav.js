@@ -1,13 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import axios from "axios";
 
-const Nav = (props) => {
+const Nav = () => {
+  const [user, setUser] = useState(null);
+
+  const getUser = async () => {
+    try {
+      console.log("Fetching user data...");
+      const response = await axios.get(
+        `https://jsonplaceholder.typicode.com/users/${Math.round(Math.random()*10)}`
+      );
+      const data = response.data;
+      console.log(data);
+      setUser(data);
+    } catch (error) {
+      console.error("Error fetching user data");
+    }
+  };
+
+  useEffect(() => {
+    getUser();
+  }, []);
+
   return (
     <div>
       <ul className="flex flex-row justify-center items-center m-1 text-blue-400 gap-1">
-        <li className="rounded-3xl p-2 m-2 bg-blue-300 text-gray-700 shadow-xl"><Link href="/Binora">Home</Link></li>
-        <li className="rounded-3xl p-2 m-2 bg-blue-300 text-gray-700 shadow-xl"><Link href="/Features">Features</Link></li>
-        <li className="rounded-3xl p-2 m-2 bg-blue-300 text-gray-700 shadow-xl"><Link href="/Login">Login</Link></li>
+        <li className="rounded-3xl p-2 m-2 bg-blue-300 text-gray-700 shadow-xl">
+          <Link href="/Binora">Home</Link>
+        </li>
+        <li className="rounded-3xl p-2 m-2 bg-blue-300 text-gray-700 shadow-xl">
+          <Link href="/Features">Features</Link>
+        </li>
+        {user ? (
+          <li className="rounded-3xl p-2 m-2 bg-blue-300 text-gray-700 shadow-xl">
+            <span>{user.name}</span>
+          </li>
+        ) : (
+          <li className="rounded-3xl p-2 m-2 bg-blue-300 text-gray-700 shadow-xl">
+            <Link href="/Login">Login</Link>
+          </li>
+        )}
       </ul>
     </div>
   );
