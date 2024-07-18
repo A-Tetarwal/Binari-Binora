@@ -1,4 +1,5 @@
 # Binari-Binora
+(Coming Soon)
 
 Binari-Binora is a messaging platform that allows users to send and receive messages in binary, text, and Morse code. It provides features for encoding messages and includes an auto-converter for easy decoding. Messages can be sent to email addresses and phone numbers, requiring basic user registration.
 
@@ -14,8 +15,8 @@ Binari-Binora is a messaging platform that allows users to send and receive mess
 
 - **Frontend**: React.js, Tailwind CSS
 - **Backend**: Node.js, Express.js
-- **Database**: MongoDB (or your preferred database)
-- **Deployment**: Heroku (or your preferred hosting service)
+- **Database**: MongoDB 
+- **Deployment**: Vercel
 
 ## Installation
 
