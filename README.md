@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Binari-Binora
 
-## Getting Started
+Binari-Binora is a messaging platform that allows users to send and receive messages in binary, text, and Morse code. It provides features for encoding messages and includes an auto-converter for easy decoding. Messages can be sent to email addresses and phone numbers, requiring basic user registration.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Send Messages**: Encode and send messages in binary, text, or Morse code.
+- **Auto-Converter**: Decode messages from binary to text or Morse code with a built-in auto-converter.
+- **Multiple Formats**: Support for sending and receiving messages in various formats.
+- **Email and SMS Integration**: Send messages directly to emails or phone numbers.
+- **User Registration**: Basic registration required to use the platform.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Frontend**: React.js, Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (or your preferred database)
+- **Deployment**: Heroku (or your preferred hosting service)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation
 
-## Learn More
+To run this project locally, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/A-Tetarwal/Binari-Binora.git
+   ```
+2. Navigate into the project directory:
+   ```bash
+   cd Binari-Binora
+   ```
+3. Install dependencies for the frontend (assuming Node.js is installed):
+   ```bash
+   cd client
+   npm install
+   ```
+4. Install dependencies for the backend:
+   ```bash
+   cd ..
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Start the frontend and backend servers:
+   - Frontend:
+     ```bash
+     cd client
+     npm start
+     ```
+   - Backend:
+     ```sql
+     npm start
+     ```
 
-## Deploy on Vercel
+2. Open your browser and navigate to `http://localhost:3000` to use Binari-Binora.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contributions are welcome! Here's how you can contribute to Binari-Binora:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/my-feature`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature/my-feature`).
+6. Create a new Pull Request.
+
+## License
+
+This project is licensed under the AGPL License - see the [LICENSE](LICENSE) file for details.
+
+---
